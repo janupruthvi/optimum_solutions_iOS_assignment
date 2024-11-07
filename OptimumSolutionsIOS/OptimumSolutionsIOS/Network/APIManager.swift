@@ -28,7 +28,7 @@ class APIManager {
                 return
             }
             guard let response = response as? HTTPURLResponse, 200 ... 299  ~= response.statusCode else {
-                completion(.failure(.serverError))
+                completion(.failure(.serverError("Invalid response")))
                 return
             }
             

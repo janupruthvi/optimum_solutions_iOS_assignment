@@ -21,10 +21,17 @@ class MovieListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setUpUI()
     }
     
     func setUpUI() {
+        cellContainerView.backgroundColor = .white
+        cellContainerView.layer.cornerRadius = 10
+        cellContainerView.layer.shadowRadius = 0.3
+        cellContainerView.layer.borderWidth = 0.5
+        cellContainerView.layer.borderColor = UIColor.gray.cgColor
         
+        yearContainerView.layer.cornerRadius = 15
     }
     
     func configureMovieList(movieObject: MovieModel) {

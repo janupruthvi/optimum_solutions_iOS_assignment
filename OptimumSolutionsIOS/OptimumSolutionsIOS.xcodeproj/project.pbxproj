@@ -11,6 +11,8 @@
 		FB58D4C52CDC7C7C00382CB5 /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB58D4C32CDC7C7C00382CB5 /* MovieListTableViewCell.swift */; };
 		FB58D4C62CDC7C7C00382CB5 /* MovieListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB58D4C42CDC7C7C00382CB5 /* MovieListTableViewCell.xib */; };
 		FB58D4C82CDC872A00382CB5 /* AsyncImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB58D4C72CDC872A00382CB5 /* AsyncImageService.swift */; };
+		FB58D4CC2CDC9E8800382CB5 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB58D4CB2CDC9E8800382CB5 /* SpinnerView.swift */; };
+		FB58D4CE2CDCA92000382CB5 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB58D4CD2CDCA92000382CB5 /* AlertView.swift */; };
 		FB74BE112CDBAA93002C1766 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB74BE102CDBAA93002C1766 /* AppDelegate.swift */; };
 		FB74BE132CDBAA93002C1766 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB74BE122CDBAA93002C1766 /* SceneDelegate.swift */; };
 		FB74BE152CDBAA93002C1766 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB74BE142CDBAA93002C1766 /* MovieListViewController.swift */; };
@@ -48,6 +50,8 @@
 		FB58D4C32CDC7C7C00382CB5 /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
 		FB58D4C42CDC7C7C00382CB5 /* MovieListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListTableViewCell.xib; sourceTree = "<group>"; };
 		FB58D4C72CDC872A00382CB5 /* AsyncImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageService.swift; sourceTree = "<group>"; };
+		FB58D4CB2CDC9E8800382CB5 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		FB58D4CD2CDCA92000382CB5 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		FB74BE0D2CDBAA93002C1766 /* OptimumSolutionsIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OptimumSolutionsIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB74BE102CDBAA93002C1766 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB74BE122CDBAA93002C1766 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,15 @@
 			path = MovieListView;
 			sourceTree = "<group>";
 		};
+		FB58D4CA2CDC9E7700382CB5 /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				FB58D4CB2CDC9E8800382CB5 /* SpinnerView.swift */,
+				FB58D4CD2CDCA92000382CB5 /* AlertView.swift */,
+			);
+			path = CommonView;
+			sourceTree = "<group>";
+		};
 		FB74BE042CDBAA93002C1766 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +154,7 @@
 		FB74BE0F2CDBAA93002C1766 /* OptimumSolutionsIOS */ = {
 			isa = PBXGroup;
 			children = (
+				FB58D4CA2CDC9E7700382CB5 /* CommonView */,
 				FB74BE402CDBAB35002C1766 /* Model */,
 				FB74BE412CDBAB3D002C1766 /* ViewModel */,
 				FB74BE422CDBAB4D002C1766 /* View */,
@@ -340,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB74BE452CDBAE53002C1766 /* MovieModel.swift in Sources */,
+				FB58D4CC2CDC9E8800382CB5 /* SpinnerView.swift in Sources */,
 				FB74BE472CDBAE81002C1766 /* MovieModelRootObj.swift in Sources */,
 				FB58D4BD2CDC576200382CB5 /* MovieListService.swift in Sources */,
 				FB74BE152CDBAA93002C1766 /* MovieListViewController.swift in Sources */,
@@ -347,6 +362,7 @@
 				FB74BE112CDBAA93002C1766 /* AppDelegate.swift in Sources */,
 				FB74BE4C2CDBB0C5002C1766 /* AppConstants.swift in Sources */,
 				FB58D4C52CDC7C7C00382CB5 /* MovieListTableViewCell.swift in Sources */,
+				FB58D4CE2CDCA92000382CB5 /* AlertView.swift in Sources */,
 				FB58D4C82CDC872A00382CB5 /* AsyncImageService.swift in Sources */,
 				FB74BE132CDBAA93002C1766 /* SceneDelegate.swift in Sources */,
 				FB74BE492CDBAF82002C1766 /* MovieListViewModel.swift in Sources */,

@@ -29,8 +29,6 @@ class MovieListService {
             return
         }
         
-        print("URL - ", url)
-        
         self.apiManager.request(url: url, method: .GET, dataType: MovieModelRootObj.self) { response in
             switch response {
             case .success(let res):
@@ -41,7 +39,7 @@ class MovieListService {
                       let response = res.response,
                       response == .TRUE
                 else {
-                    completion(.failure(APIError.noData))
+                    completion(.failure(APIError.serverError(res.error)))
                     return
                 }
                 

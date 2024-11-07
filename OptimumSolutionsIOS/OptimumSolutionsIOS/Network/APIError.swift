@@ -8,7 +8,7 @@
 import Foundation
 
 enum APIError: Error {
-    case serverError
+    case serverError(String?)
     case invalidData
     case noData
     case URLError

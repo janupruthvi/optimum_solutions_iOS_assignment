@@ -32,7 +32,7 @@ class AsyncImageService {
         URLSession.shared.dataTask(with: url, completionHandler: {
             [weak self] (data, response, error) in
             
-            guard error != nil else {
+            guard error == nil else {
                 return
             }
             
