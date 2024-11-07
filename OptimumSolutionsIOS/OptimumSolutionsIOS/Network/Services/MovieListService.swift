@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 class MovieListService {
     
@@ -16,41 +15,42 @@ class MovieListService {
         self.apiManager = apiManager
     }
     
-    func getMovieData(with searchQuery: String) -> AnyPublisher<[MovieModel], Error> {
-        Future {[weak self] promise in
-            
-            var components = URLComponents(string: AppConstants.BaseURL)!
+    func getMovieData(with searchQuery: String,
+                      completion: @escaping (Result<[MovieModel], APIError>) -> Void) -> Void {
+        var components = URLComponents(string: AppConstants.BaseURL)!
 
-            components.queryItems = [
-                URLQueryItem(name: "s", value: searchQuery),
-                URLQueryItem(name: "apikey", value: AppConstants.ApiKey)
-            ]
+        components.queryItems = [
+            URLQueryItem(name: "s", value: searchQuery),
+            URLQueryItem(name: "apikey", value: AppConstants.ApiKey)
+        ]
 
-            guard let url = components.url else {
-                promise(.failure(APIError.URLError))
-                return
-            }
-            
-            print("URL - ", url)
-            
-            self?.apiManager.request(url: url, method: .GET, dataType: MovieModelRootObj.self) { response in
-                switch response {
-                case .success(let res):
-                    
-                    guard let data =  res.search, res.response ?? false else {
-                        promise(.failure(APIError.noData))
-                        return
-                    }
-                    
-                    promise(.success(data))
-                case .failure(let error):
-                    promise(.failure(error))
+        guard let url = components.url else {
+            completion(.failure(APIError.URLError))
+            return
+        }
+        
+        print("URL - ", url)
+        
+        self.apiManager.request(url: url, method: .GET, dataType: MovieModelRootObj.self) { response in
+            switch response {
+            case .success(let res):
+                
+                /// Handle data fetch when the response is only TRUE
+                /// or passing an error
+                guard let data =  res.search,
+                      let response = res.response,
+                      response == .TRUE
+                else {
+                    completion(.failure(APIError.noData))
+                    return
                 }
                 
+                completion(.success(data))
+            case .failure(let error):
+                completion(.failure(error))
             }
+            
         }
-        .compactMap({$0})
-        .eraseToAnyPublisher()
     }
     
 }

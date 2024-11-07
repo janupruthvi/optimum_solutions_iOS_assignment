@@ -42,25 +42,6 @@ class APIManager {
         }.resume()
     }
     
-    func fetch() {
-//        APIManager.shared.request(url: <#T##URL#>, method: .GET, dataType: MovieModel.self) { response in
-//            switch response {
-//            case .success(let products):
-//                //self.products = products
-//            case .failue(let error):
-//                print(error)
-//            }
-//        }
-//        APIManager.shared.fetchProducts { response in
-//            switch response {
-//            case .success(let products):
-//                self.products = products
-//            case .failue(let error):
-//                print(error)
-//            }
-//        }
-    }
-    
 }
 
 enum APIMethod: String {

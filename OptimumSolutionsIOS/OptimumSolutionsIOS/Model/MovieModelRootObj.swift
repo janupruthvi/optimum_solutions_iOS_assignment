@@ -11,11 +11,13 @@ struct MovieModelRootObj: Codable {
     let search: [MovieModel]?
     let response: MovieRespose?
     let error: String?
+    let totalResults: String?
     
     enum CodingKeys: String, CodingKey {
         case search = "Search"
         case response = "Response"
         case error = "Error"
+        case totalResults = "totalResults"
     }
     
 }
