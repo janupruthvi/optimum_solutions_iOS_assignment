@@ -132,6 +132,15 @@
 			path = CommonView;
 			sourceTree = "<group>";
 		};
+		FB58D4CF2CDCB90A00382CB5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FB74BE162CDBAA93002C1766 /* Main.storyboard */,
+				FB74BE1B2CDBAA96002C1766 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		FB74BE042CDBAA93002C1766 = {
 			isa = PBXGroup;
 			children = (
@@ -159,12 +168,11 @@
 				FB74BE412CDBAB3D002C1766 /* ViewModel */,
 				FB74BE422CDBAB4D002C1766 /* View */,
 				FB74BE432CDBAB62002C1766 /* Network */,
+				FB58D4CF2CDCB90A00382CB5 /* Storyboards */,
 				FB74BE4A2CDBB076002C1766 /* AppConfigurations */,
 				FB74BE102CDBAA93002C1766 /* AppDelegate.swift */,
 				FB74BE122CDBAA93002C1766 /* SceneDelegate.swift */,
-				FB74BE162CDBAA93002C1766 /* Main.storyboard */,
 				FB74BE192CDBAA96002C1766 /* Assets.xcassets */,
-				FB74BE1B2CDBAA96002C1766 /* LaunchScreen.storyboard */,
 				FB74BE1E2CDBAA96002C1766 /* Info.plist */,
 			);
 			path = OptimumSolutionsIOS;

@@ -24,19 +24,30 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search for movies using the search bar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUu-XW-Q3F">
+                                <rect key="frame" x="30" y="416" width="333" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
+                            <constraint firstItem="eUu-XW-Q3F" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DKY-eF-5aj"/>
+                            <constraint firstItem="eUu-XW-Q3F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="HuR-Uh-Xd0"/>
                             <constraint firstItem="N7d-sX-ilL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Yme-e3-dVh"/>
                             <constraint firstItem="N7d-sX-ilL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cqw-QO-D7a"/>
                             <constraint firstItem="N7d-sX-ilL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ruA-en-B6v"/>
+                            <constraint firstItem="eUu-XW-Q3F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x51-yz-ae9"/>
                             <constraint firstItem="N7d-sX-ilL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="x6o-p5-i3j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eUu-XW-Q3F" secondAttribute="trailing" constant="30" id="zuE-NU-JfV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wgC-wq-OfR"/>
                     <connections>
                         <outlet property="movieListTableView" destination="N7d-sX-ilL" id="DHk-jt-z2z"/>
+                        <outlet property="searchGuideLbl" destination="eUu-XW-Q3F" id="KNN-hh-WYd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -17,6 +17,9 @@ class MovieListViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var searchGuideLbl: UILabel!
+    
+    
     var subscription = Set<AnyCancellable>()
     
     var searchTimer: Timer?
@@ -38,11 +41,16 @@ class MovieListViewController: UIViewController {
     
     func setUpSubscription() {
         
-        viewModel.movieList.sink{_ in
+        viewModel.movieList.sink(receiveValue: { [weak self] movieList in
             DispatchQueue.main.async {
-                self.movieListTableView.reloadData()
+                self?.movieListTableView.reloadData()
+                if movieList.isEmpty {
+                    self?.searchGuideLbl.isHidden = false
+                } else {
+                    self?.searchGuideLbl.isHidden = true
+                }
             }
-        }.store(in: &subscription)
+        }).store(in: &subscription)
         
         viewModel.isLoading.sink(receiveValue: { [weak self] isLoading in
             DispatchQueue.main.async {
